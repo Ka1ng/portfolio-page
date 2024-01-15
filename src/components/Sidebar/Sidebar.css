@@ -1,0 +1,67 @@
+.sidebar-content{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--body-clr);
+    transition: 0.5s;
+    left: -300px;
+    z-index: 1001;
+    border-radius: 0 50px 50px 0;
+    padding: 100px 30px;
+}
+
+.sidebar-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: var(--z-modal);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.sidebar-content.show{
+    left: 0px;
+}
+
+.sidebar-bg.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-content li{
+    border-bottom: 1px solid var(--black-clr);
+    padding-top: var(--mb-1);
+    padding-bottom: var(--mb-1);
+    transition: 0.3s;
+    padding-left: var(--mb-0-75);
+}
+
+.sidebar-content li a{
+    font-size: var(--h3-font-size);
+    color: var(--black-clr);
+    transition: 0.3s;
+}
+
+.sidebar-content li a:hover{
+    color: var(--ghostwhite-clr);
+}
+
+/* ============Breakpoints============ */
+@media screen and (max-width:620px) {
+    
+}
+
+@media screen and (min-width:620px) {
+    .sidebar-content{
+       display: none;
+    }
+
+    .sidebar-bg.show{
+        visibility: hidden;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,89 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-clr);
+}
+
+.navbar .logo-text{
+    font-weight: var(--font-medium);
+    font-size: var(--h2-font-size);
+    cursor: pointer;
+    user-select: none;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    margin-left: 2rem;
+}
+
+.navbar ul li a{
+    color: var(--black-clr);
+}
+
+.navbar ul li a:hover{
+    color: var(--ghostwhite-clr);
+}
+
+.line-container{
+    position: relative;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+
+.line-container span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--black-clr);
+    border-radius: 10px;
+}
+
+.line1{
+    top: 0;
+    right: 50%;
+    transition: 0.3s;
+}
+
+.line2{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.line3{
+    bottom: 0;
+    left: 50%;
+    transition: 0.3s;
+}
+
+.line-container:hover .line1{
+    right: 0;
+}
+
+.line-container:hover .line3{
+    left: 0;
+}
+
+
+/* ============Breakpoints================ */
+@media screen and (max-width:620px) {
+    .navbar ul{
+        display: none;
+    }
+
+    .line-container{
+        display: block;
+    }
+}

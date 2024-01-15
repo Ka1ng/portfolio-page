@@ -1,0 +1,87 @@
+.header{
+    height: 90vh;
+    width: 100%;
+    /* background-color: lightcoral; */
+}
+
+.headerImgBox{
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    border: 10px solid var(--ghostwhite-clr);
+
+    animation: profileEffect 10s linear infinite;
+}
+
+@keyframes profileEffect {
+    0%{
+        border-radius: 40% 70% 60% 40% / 50% 30% 60% 80%;
+    }
+
+    25%{
+        border-radius: 60% 40% 70% 60% / 70% 60% 50% 80%;
+    }
+
+    50%{
+        border-radius: 70% 50% 50% 80% / 80% 60% 50% 90%;
+    }
+
+    75%{
+        border-radius: 60% 50% 80% 70% / 70% 50% 80% 60%;
+    }
+
+    100%{
+        border-radius: 40% 70% 60% 40% / 50% 30% 60% 80%;
+    }
+}
+
+.headerImgBox img{
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headerTitle{
+    font-weight: var(--font-semi-bold);
+    font-size: var(--h1-font-size);
+    line-height: 2.5rem;
+    margin-bottom: var(--mb-1-5);
+}
+
+.techStack{
+    margin-top: var(--mb-3);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+}
+
+
+.langIcon{
+    width: 60px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.techStackIcons ul{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
+}
+
+.headerBtn{
+    margin-top: var(--mb-1-5);
+}
+
+
+/* ==============Breakpoints=========== */
+@media screen and (max-width:892px) {
+    .techStack{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .header.container{
+        padding: 5rem 2rem;
+    }
+}

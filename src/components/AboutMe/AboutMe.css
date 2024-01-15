@@ -1,0 +1,51 @@
+.aboutMe.container{
+    padding-top: 10rem;
+}
+
+.imgBox{
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.aboutMe img{
+    border-radius: 10px;
+}
+
+.imgBox{
+    position: relative;
+}
+
+.circular{
+    position: absolute;
+    background-color: var(--body-clr);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    right: -20px;
+    bottom: -50px;
+    animation: circularEffect 10s linear infinite ;
+}
+
+@keyframes circularEffect {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ===========Breakpoints============= */
+@media screen and (max-width: 992px) {
+    .imgBox{
+        width: 350px;
+        height: 250px;
+    }
+
+    .circular{
+        right: -20px;
+        bottom: -10px;
+    }
+}

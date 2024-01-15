@@ -1,0 +1,35 @@
+.contact-list{
+    margin-top: var(--mb-3);
+}
+
+.contactContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: var(--mb-2);
+}
+
+.contactBox{
+    display: flex;
+    gap: 2rem;
+}
+
+.contactBox-test .projectTitle{
+    margin: 0px;
+}
+
+.contactBox .i{
+    height: 30px;
+}
+
+.contact.container{
+    padding-bottom: 0px;
+    padding-top: 5rem;
+}
+
+/* =============Breakpoints============= */
+@media screen and (max-width:905px) {
+    .contactContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
